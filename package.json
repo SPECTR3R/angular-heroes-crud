@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "backend": "json-server --watch data/db.json",
-    "dev": "concurrently \"npm run backend\" \"npm run watch\"",
+    "dev": "concurrently \"npm run backend\" \"npm run ng serve -o\"",
     "restore-db": "cp data/db-bak.json data/db.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
