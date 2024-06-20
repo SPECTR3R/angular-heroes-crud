@@ -1,57 +1,13 @@
-<!-- <mat-sidenav-container fullscreen>
-  <mat-sidenav
-    #sidenav
-    mode="push"
-    [ngStyle]="{ width: '200px', 'background-color': '##191c1ce5' }"
-    opened
-  >
-    <mat-toolbar color="blue">
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
+    <mat-toolbar>
       <span>Menu</span>
       <span class="spacer"></span>
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
     </mat-toolbar>
-
     <mat-nav-list>
-      <a mat-list-item routerLink="/heroes" (click)="sidenav.toggle()"
-        >Heroes</a
-      >
-      <a mat-list-item routerLink="/auth/login" (click)="sidenav.toggle()"
-        >Login</a
-      >
-      <a mat-list-item routerLink="/auth/register" (click)="sidenav.toggle()"
-        >Register</a
-      >
-    </mat-nav-list>
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-
-  <mat-toolbar color="primary">
-    <button mat-icon-button (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-  </mat-toolbar>
-</mat-sidenav-container> -->
-<mat-sidenav-container fullscreen>
-  <mat-sidenav
-    #sidenav
-    mode="push"
-    [ngStyle]="{ width: '250px' }"
-    color="Secondary"
-  >
-    <mat-toolbar>
-      <span>Menú</span>
-      <span class="spacer"></span>
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </mat-toolbar>
-
-    <!-- <mat-nav-list>
       <mat-list-item
         *ngFor="let item of sidebarItems"
         [routerLink]="item.url"
@@ -60,19 +16,15 @@
         <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
         {{ item.label }}
       </mat-list-item>
-    </mat-nav-list> -->
+    </mat-nav-list>
   </mat-sidenav>
-
-  <mat-toolbar [ngStyle]="{ backgroundColor: '##20f8f8e5' }">
+  <mat-toolbar [ngStyle]="{ 'background-color': '#1F2525' }">
     <button *ngIf="!sidenav.opened" mat-icon-button (click)="sidenav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-
     <span class="spacer"></span>
-
     <button mat-button>Logout</button>
   </mat-toolbar>
-
   <div class="container p-2">
     <router-outlet></router-outlet>
   </div>
