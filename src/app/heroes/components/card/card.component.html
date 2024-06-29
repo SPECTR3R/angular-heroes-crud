@@ -13,9 +13,10 @@
       <br />
       <mat-chip-listbox>
         <mat-chip
-          *ngFor="let name of hero.characters.split(',') | slice : 0 : 3"
+          *ngFor="let name of hero.characters.split(',') | slice: 0 : 3"
         >
           {{ name }}
+          {{ lastname }}
         </mat-chip>
       </mat-chip-listbox>
     </p>
